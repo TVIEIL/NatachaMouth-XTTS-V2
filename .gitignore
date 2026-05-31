@@ -1,0 +1,14 @@
+# Environnement et secrets
+.env
+__pycache__/
+*.pyc
+
+# Dossiers à ignorer
+src/
+models/
+dev/
+
+# Dossiers temporaires
+data_in/
+
+
