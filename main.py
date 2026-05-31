@@ -114,7 +114,7 @@ def on_message(client, userdata, msg):
         if payload == "traitement en cours":
             print("⏳ Natacha est en train de réfléchir...")
             audio_queue.put("data/traitement_en_cours.wav")
-        return # <--- IL FAUT CE RETURN POUR SORTIR ET NE PAS LANCER LE RESTE
+        return 
 
     # 3. Gestion du canal "natacha/reponse"
     if msg.topic == "natacha/reponse":
@@ -150,7 +150,7 @@ def on_message_OLD(client, userdata, msg):
             audio_queue.put("data/traitement_en_cours.wav")
         return
 
-    # Gestion de la réponse vocale (ton code existant)
+    # Gestion de la réponse vocale 
     text = msg.payload.decode('utf-8').strip()
     if not text: return
 
